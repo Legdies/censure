@@ -4,7 +4,7 @@ Here is a simple and may be inefficient module for censoring any inappropriate w
 
 ### How to use it
 1. If you have specific filename for your dictionary, edit filename in line 9
-2. {Currently don't have} If you newbie in coding change filenam in config file.
+2. {_Currently don't have_} If you newbie in coding change filenam in config file.
 
 ## TODO
 [ ] Rewrite this README.md\
