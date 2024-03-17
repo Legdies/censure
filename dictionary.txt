@@ -1,0 +1,17 @@
+Control Unit - Send signals to direct tge operations
+Register - keeps clocks in sysc
+ALU - Perfom math operations
+Cache - High speed memory incide the processor that store recenly used instructions
+
+a - PC 
+b - Cache
+c - MAR MDR 
+d - RAM 
+
+ACC - contain temp. data to perfom comple calculations
+
+Core speed in computer A is faster so operations in CPU proccessed faster because frequency means how much operations CPU can Process per second.
+
+1 - RAM
+2 - Graphics processing unit
+
