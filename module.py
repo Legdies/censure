@@ -18,11 +18,11 @@ class Tester:
 
         try:
             for word in parsing:
-                if word.lower() == "stink" or word.lower() in cleaned_words:
+                if word.lower() in cleaned_words:
                     parsed.append("#####")
                 else:
                     parsed.append(word)
             result = " ".join(parsed)
-            print(result)
+            return result
         except Exception as e:
             print("Ошибка:", e)
