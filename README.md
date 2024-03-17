@@ -1,6 +1,6 @@
 # Censure test module
 
-Here is a simple and may be inefficient module for censoring any inappropriate word which will be declared in dictionary.txt
+Here is a simple and may be inefficient module for censoring any inappropriate word which not declared in dictionary.txt
 
 ### How to use it
 1. If you have specific filename for your dictionary, edit filename in line 9.
