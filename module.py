@@ -1,32 +1,21 @@
 import configparser
+import re
 class Tester:
     def __init__(self, text):
         self.text = text
 
     def test(self):
-        parsing = self.text.split()
         parsed = []
         config = configparser.ConfigParser()
         config.read("config.ini")
         path_to_dictionary = config.get("dictionary_path", "path")
 
         with open(path_to_dictionary, "r") as file:
-
-            words = file.read().split()
-
-
-        cleaned_words = set()
-        for word in words:
-            cleaned_word = ''.join(filter(str.isalnum, word))
-            cleaned_words.add(cleaned_word.lower())
+            bad_phrases = [re.escape(phrase.strip()) for phrase in file.readlines()]
 
         try:
-            for word in parsing:
-                if word.lower() in cleaned_words:
-                    parsed.append("#####")
-                else:
-                    parsed.append(word)
-            result = " ".join(parsed)
+            regex = r"\b(" + "|".join(bad_phrases) + r")\b"
+            result = re.sub(regex, lambda m: "*" * len(m.group()), self.text, flags=re.IGNORECASE)
             return result
         except Exception as e:
             print("Ошибка:", e)
