@@ -1,3 +1,4 @@
+import configparser
 class Tester:
     def __init__(self, text):
         self.text = text
@@ -5,8 +6,11 @@ class Tester:
     def test(self):
         parsing = self.text.split()
         parsed = []
+        config = configparser.ConfigParser()
+        config.read("config.ini")
+        path_to_dictionary = config.get("dictionary_path", "path")
 
-        with open("dictionary.txt", "r") as file:
+        with open(path_to_dictionary, "r") as file:
 
             words = file.read().split()
 
