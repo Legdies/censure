@@ -1,1 +1,0 @@
-#this file used to create list of words that will be censured.
